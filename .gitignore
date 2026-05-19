@@ -1,4 +1,5 @@
-build/
+S.vscode/
+.catkin_workspacebuild/
 devel/
 install/
 logs/
