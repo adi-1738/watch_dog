@@ -8,10 +8,13 @@ project(vehicle_watchdog)
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
-  diagnostic_updater
   roscpp
   std_msgs
+  nav_msgs
+  sensor_msgs
+  diagnostic_updater
 )
+
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
@@ -103,12 +106,13 @@ find_package(catkin REQUIRED COMPONENTS
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
-#  INCLUDE_DIRS include
-#  LIBRARIES vehicle_watchdog
-#  CATKIN_DEPENDS diagnostic_updater roscpp std_msgs
-#  DEPENDS system_lib
+  CATKIN_DEPENDS
+  roscpp
+  std_msgs
+  nav_msgs
+  sensor_msgs
+  diagnostic_updater
 )
-
 ###########
 ## Build ##
 ###########
